@@ -14,8 +14,12 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
+    filtro_search = params[:search]
     @posts = Post.where(published: true)
-    render json: @posts, status: 200
+    if !filtro_search.nil? && filtro_search.present?
+      @posts = PostsSearchService.search(@posts, filtro_search)
+    end
+    render json: @posts.includes(:user), status: 200
   end
   
   # GET /posts/{id}
