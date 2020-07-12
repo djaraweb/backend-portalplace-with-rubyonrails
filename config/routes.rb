@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   # get '/name_route', to: 'name_controller#name_method'
   
   get '/health', to: 'health#health'
+
+  resources :posts, only: [:index, :show, :create, :update]
 end
