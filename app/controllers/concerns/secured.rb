@@ -1,5 +1,5 @@
 module Secured
-  def authenticate_user!
+  def valid_authenticate_user
     # Bearer xxxxxx
     token_regex = /Bearer (\w+)/
     # leer HEADER de auth
@@ -13,6 +13,6 @@ module Secured
       end
     end
 
-    render json: {error: 'Unauthorized'}, status: :unauthorized
+    render json: {error: 'User Unauthorized', code: 401}, status: :unauthorized
   end
 end

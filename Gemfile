@@ -32,18 +32,24 @@ group :development, :test do
   # Instalacion de Gemas relacionadas al testing:
   gem 'rspec-rails', '~> 3.5'
 
+  # Instalacion de gemas para crear datos falsos:
+  gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker', '~> 1.9'
 end
 
 group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 3.1'
-  gem 'faker', '~> 1.9'
   gem 'database_cleaner', '~> 1.7'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers', '~> 0.10.8'
+gem 'rack-cors'
+gem 'fast_jsonapi'
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'sendgrid-ruby'

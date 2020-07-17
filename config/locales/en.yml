@@ -31,3 +31,34 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "(Nombre) el campo es requerido"
+            email:
+              blank: "(Email) el campo es requerido"
+            password:
+              blank: "(Contraseña) el campo es requerido"
+        property:
+          attributes:
+            placehouse:
+              blank: "(Vivienda) el campo es requerido"
+            title:
+              blank: "(Descripción) el campo es requerido"
+            mts2:
+              blank: "(Mts2) el campo es requerido"
+            street:
+              blank: "(Dirección) el campo es requerido"
+            geolat:
+              blank: "(Ge. Latitud) el campo es requerido"
+            geolng:
+              blank: "(Geo. Longitud) el campo es requerido"                                          
+            visits:
+              blank: "(Nro Visitas) el campo es requerido"                 
+            price:
+              blank: "(Precio) el campo es requerido"                 
+            urlimage:
+              blank: "(Url Imagen) el campo es requerido"                   
